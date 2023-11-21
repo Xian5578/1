@@ -1,0 +1,17 @@
+from sklearn.linear_model import LogisticRegression
+import pandas as pd
+import matplotlob.pyplot as plt
+from sklearn.datasets import make_blobs
+
+X,y = make_blobs(readom_state=0,
+                 n_features=2,
+                 centers=2,
+                 cluster_std=1,
+                 n_samples=300)
+
+df = pd.DataFrame(X)
+
+plt.figure(figsize=(5,5))
+plt.scatter(df[0], df[1], c=y)
+plt.show()
+
